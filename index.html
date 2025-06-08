@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+    /* Custom scrollbar for webkit browsers */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1; 
+    }
+    .dark ::-webkit-scrollbar-track {
+      background: #2d3748; /* dark:bg-slate-700 */
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #888; 
+      border-radius: 4px;
+    }
+    .dark ::-webkit-scrollbar-thumb {
+      background: #555;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555; 
+    }
+    .dark ::-webkit-scrollbar-thumb:hover {
+      background: #777;
+    }
+    /* Basic body styling for dark mode transition */
+    body {
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+  </style>
+  <script>
+    // Tailwind dark mode configuration
+    tailwind.config = {
+      darkMode: 'class', // or 'media'
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'], // Example: Using Inter font
+          },
+          animation: {
+            'fade-in-up': 'fadeInUp 0.5s ease-out',
+            'slide-in-left': 'slideInLeft 0.5s ease-out forwards',
+          },
+          keyframes: {
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            slideInLeft: {
+              '0%': { transform: 'translateX(-100%)', opacity: '0' },
+              '100%': { transform: 'translateX(0)', opacity: '1' },
+            }
+          },
+          colors: {
+            primary: {
+              light: '#3b82f6', // blue-500
+              DEFAULT: '#2563eb', // blue-600
+              dark: '#1d4ed8'  // blue-700
+            },
+            secondary: {
+              light: '#10b981', // emerald-500
+              DEFAULT: '#059669', // emerald-600
+              dark: '#047857'  // emerald-700
+            },
+            lightbg: '#f8fafc', // slate-50
+            darkbg: '#0f172a',  // slate-900
+            lighttext: '#1e293b', // slate-800
+            darktext: '#e2e8f0' // slate-200
+          }
+        }
+      }
+    }
+  </script>
+
+<link rel="stylesheet" href="/index.css">
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/"
+  }
+}
+</script>
+  <script type="module" crossorigin src="https://github.com/Yassinebayoudh20/assets/index-DWjGaDfF.js"></script>
+</head>
+<body class="bg-lightbg text-lighttext dark:bg-darkbg dark:text-darktext font-sans antialiased">
+  <div id="root"></div>
+</body>
+</html>
