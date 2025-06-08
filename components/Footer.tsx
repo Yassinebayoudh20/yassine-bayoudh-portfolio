@@ -16,12 +16,9 @@ const Footer: React.FC = () => {
           <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary-light transition-colors duration-300">
             <LinkedinIcon className="w-6 h-6" />
           </a>
-          <a href={SOCIAL_LINKS.twitter} target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary-light transition-colors duration-300">
-            <TwitterIcon className="w-6 h-6" />
-          </a>
         </div>
         <p className="text-sm text-slate-500 dark:text-slate-400">
-          &copy; {currentYear} Your Name. All rights reserved.
+          &copy; {currentYear} Yassine Bayoudh. All rights reserved.
         </p>
         <p className="text-xs text-slate-400 dark:text-slate-500 mt-1">
           Portfolio Template by AI.

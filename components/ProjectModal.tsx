@@ -61,29 +61,52 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
           <h4 className="text-lg font-semibold mb-2">Description:</h4>
           <p className="text-slate-600 dark:text-slate-300 whitespace-pre-line">{project.longDescription}</p>
         </div>
-        
         <div className="flex space-x-4">
           {project.githubUrl && (
-            <a
-              href={project.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white text-sm font-medium rounded-md transition-colors"
-            >
-              <GithubIcon className="w-5 h-5 mr-2" />
-              View on GitHub
-            </a>
+            <div className="relative group">
+              <a
+          href={project.privateRepository ? "#" : project.githubUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`inline-flex items-center px-4 py-2 text-sm font-medium rounded-md transition-colors ${
+            project.privateRepository 
+              ? 'bg-slate-400 cursor-not-allowed' 
+              : 'bg-slate-700 hover:bg-slate-600 text-white'
+          }`}
+          onClick={(e) => project.privateRepository && e.preventDefault()}
+              >
+          <GithubIcon className="w-5 h-5 mr-2" />
+          View on GitHub
+          {project.privateRepository && (
+            <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-slate-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+              Private Repository
+            </span>
+          )}
+              </a>
+            </div>
           )}
           {project.demoUrl && (
-            <a
-              href={project.demoUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center px-4 py-2 bg-primary hover:bg-primary-dark text-white text-sm font-medium rounded-md transition-colors"
-            >
-              <ExternalLinkIcon className="w-5 h-5 mr-2" />
-              Live Demo
-            </a>
+            <div className="relative group">
+              <a
+          href={project.privateRepository ? "#" : project.demoUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`inline-flex items-center px-4 py-2 text-sm font-medium rounded-md transition-colors ${
+            project.privateRepository 
+              ? 'bg-primary/50 cursor-not-allowed' 
+              : 'bg-primary hover:bg-primary-dark text-white'
+          }`}
+          onClick={(e) => project.privateRepository && e.preventDefault()}
+              >
+          <ExternalLinkIcon className="w-5 h-5 mr-2" />
+          Live Demo
+          {project.privateRepository && (
+            <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-slate-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+              Private Repository
+            </span>
+          )}
+              </a>
+            </div>
           )}
         </div>
       </div>

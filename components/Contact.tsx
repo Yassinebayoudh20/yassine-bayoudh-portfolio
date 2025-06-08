@@ -86,9 +86,6 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
             <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary-light transition-colors p-2 bg-slate-200 dark:bg-slate-700 rounded-full">
               <LinkedinIcon className="w-6 h-6" />
             </a>
-            <a href={SOCIAL_LINKS.twitter} target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary-light transition-colors p-2 bg-slate-200 dark:bg-slate-700 rounded-full">
-              <TwitterIcon className="w-6 h-6" />
-            </a>
           </div>
         </div>
 

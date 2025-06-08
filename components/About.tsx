@@ -17,16 +17,16 @@ const About: React.FC<AboutProps> = ({ id, experiences, skills }) => {
       <div className="grid md:grid-cols-3 gap-12 items-start">
         <div className="md:col-span-1 text-center md:text-left">
            <img 
-            src="https://picsum.photos/seed/about_me/400/400" 
+            src="https://res.cloudinary.com/de870fank/image/upload/v1749379941/WhatsApp_Image_2025-06-08_%C3%A0_11.51.19_dcc4b71f_rjwnlf.jpg" 
             alt="About me" 
             className="rounded-lg shadow-xl mx-auto md:mx-0 w-full max-w-xs object-cover"
           />
         </div>
         <div className="md:col-span-2">
           <p className="text-lg text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
-            Hello! I'm a dedicated and results-oriented software engineer with a strong focus on frontend technologies. 
+            Hello! I'm a dedicated and results-oriented software engineer with a strong focus on frontend and backend technologies. 
             I thrive on transforming complex problems into intuitive and engaging user experiences. 
-            With several years in the industry, I've had the privilege of working on diverse projects, honing my skills in modern JavaScript frameworks, responsive design, and performance optimization.
+            With several years in the industry, I've had the privilege of working on diverse projects, honing my skills in modern JavaScript frameworks and .NET Core Frameworks, responsive design, and performance optimization.
           </p>
           <p className="text-lg text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
             I'm a lifelong learner, always eager to explore new technologies and methodologies. 

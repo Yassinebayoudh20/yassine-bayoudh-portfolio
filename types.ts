@@ -28,6 +28,7 @@ export interface Project {
   longDescription: string;
   year: string;
   category: string; // e.g., 'Web Development', 'Mobile App', 'UI/UX Design'
+  privateRepository : boolean;
 }
 
 export interface BlogPost {

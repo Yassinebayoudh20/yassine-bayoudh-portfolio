@@ -24,7 +24,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onReadMore }) => {
         <p className="text-sm text-slate-600 dark:text-slate-300 mb-4 flex-grow">{project.description}</p>
         <div className="mt-auto">
           <div className="flex justify-between items-center mb-4">
-             <button
+            <button
               onClick={() => onReadMore(project)}
               className="text-sm text-primary dark:text-primary-light font-medium hover:underline"
             >
@@ -32,14 +32,40 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onReadMore }) => {
             </button>
             <div className="flex space-x-3">
               {project.githubUrl && (
-                <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary-light">
-                  <GithubIcon className="w-5 h-5" />
-                </a>
+                <div className="relative group">
+                  <span
+                    className={`${
+                      project.privateRepository
+                        ? 'cursor-not-allowed text-slate-400'
+                        : 'text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary-light'
+                    }`}
+                  >
+                    <GithubIcon className="w-5 h-5" />
+                  </span>
+                  {project.privateRepository && (
+                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 text-xs text-white bg-slate-700 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                      Private Repository
+                    </div>
+                  )}
+                </div>
               )}
               {project.demoUrl && (
-                <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary-light">
-                  <ExternalLinkIcon className="w-5 h-5" />
-                </a>
+                <div className="relative group">
+                  <span
+                    className={`${
+                      project.privateRepository
+                        ? 'cursor-not-allowed text-slate-400'
+                        : 'text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary-light'
+                    }`}
+                  >
+                    <ExternalLinkIcon className="w-5 h-5" />
+                  </span>
+                  {project.privateRepository && (
+                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 text-xs text-white bg-slate-700 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                      Private Repository
+                    </div>
+                  )}
+                </div>
               )}
             </div>
           </div>

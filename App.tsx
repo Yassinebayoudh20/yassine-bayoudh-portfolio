@@ -75,7 +75,7 @@ const App: React.FC = () => {
         <Hero id={SectionId.Home} />
         <About id={SectionId.About} experiences={DUMMY_EXPERIENCES} skills={skillsWithIcons} />
         <Projects id={SectionId.Projects} projects={DUMMY_PROJECTS} />
-        <Blog id={SectionId.Blog} posts={DUMMY_BLOG_POSTS} />
+        {/* <Blog id={SectionId.Blog} posts={DUMMY_BLOG_POSTS} /> */}
         <Contact id={SectionId.Contact} />
       </main>
       <Footer />
