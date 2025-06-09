@@ -22,7 +22,8 @@ export const DUMMY_PROJECTS: Project[] = [
     description:
       "Tracks workforce time, generates reports, and manages vacations.",
     tags: ["Angular", ".NET Core", "SQL Server", "Keycloak", "Docker"],
-    imageUrl: "https://res.cloudinary.com/de870fank/image/upload/v1749379117/ChatGPT_Image_Jun_8_2025_11_40_00_AM_ofok3o.png",
+    imageUrl:
+      "https://res.cloudinary.com/de870fank/image/upload/v1749379258/ChatGPT_Image_Jun_8_2025_11_40_00_AM_ey7puo.png",
     githubUrl: "#",
     demoUrl: "#",
     longDescription:
@@ -36,7 +37,8 @@ export const DUMMY_PROJECTS: Project[] = [
     title: "Formulation",
     description: "For managing and versioning alchemy experiments.",
     tags: ["Angular", "Bootstrap", "i18n"],
-    imageUrl: "https://res.cloudinary.com/de870fank/image/upload/v1749379267/ChatGPT_Image_Jun_8_2025_11_41_58_AM_rhdcob.png",
+    imageUrl:
+      "https://res.cloudinary.com/de870fank/image/upload/v1749379267/ChatGPT_Image_Jun_8_2025_11_41_58_AM_rhdcob.png",
     githubUrl: "#",
     demoUrl: "#",
     longDescription:
@@ -50,7 +52,8 @@ export const DUMMY_PROJECTS: Project[] = [
     title: "Matrix",
     description: "Optimized planning and resource allocation in manufacturing.",
     tags: ["Angular", ".NET", "SQL Server"],
-    imageUrl: "https://res.cloudinary.com/de870fank/image/upload/v1749379356/ChatGPT_Image_Jun_8_2025_11_44_11_AM_oxuixr.png",
+    imageUrl:
+      "https://res.cloudinary.com/de870fank/image/upload/v1749379356/ChatGPT_Image_Jun_8_2025_11_44_11_AM_oxuixr.png",
     githubUrl: "#",
     demoUrl: "#",
     longDescription:
@@ -58,6 +61,36 @@ export const DUMMY_PROJECTS: Project[] = [
     year: "2023",
     category: "Workflow Tools",
     privateRepository: true,
+  },
+  {
+    id: "4",
+    title: "Ikrini API",
+    description: "Ongoing project initially to be an API for booking cars.",
+    tags: [".NET", "SQL Server", "XUnit"],
+    imageUrl:
+      "https://res.cloudinary.com/de870fank/image/upload/v1749379356/ChatGPT_Image_Jun_8_2025_11_44_11_AM_oxuixr.png",
+    githubUrl: "https://github.com/Yassinebayoudh20/Ikrini.Core.API",
+    demoUrl: "#",
+    longDescription:
+      "The development of this api follow the TDD design pattern to ensure that every functionality works as expected and it follow the Standard approach.",
+    year: "2025",
+    category: "Web API",
+    privateRepository: false,
+  },
+    {
+    id: "5",
+    title: "VehiGate",
+    description: "vehicle management platform.",
+    tags: [".NET", "SQL Server", "Angular"],
+    imageUrl:
+      "https://res.cloudinary.com/de870fank/image/upload/v1749379356/ChatGPT_Image_Jun_8_2025_11_44_11_AM_oxuixr.png",
+    githubUrl: "https://github.com/Yassinebayoudh20/VehiGate",
+    demoUrl: "#",
+    longDescription:
+      "It provides a comprehensive solution for managing vehicle-related data, including vehicle registration, tracking, maintenance scheduling, and more.",
+    year: "2024",
+    category: "Web Application",
+    privateRepository: false,
   },
 ];
 
@@ -142,5 +175,4 @@ export const SOCIAL_LINKS = {
   email: "bayoudh.yassine20@gmail.com",
 };
 
-export const RESUME_PATH =
-  "/yassine-bayoudh-portfolio/public/yassine-bayoudh.pdf";
+export const RESUME_PATH = "/yassine-bayoudh-portfolio/yassine-bayoudh.pdf";
